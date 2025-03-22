@@ -1,0 +1,58 @@
+@use "@/styles/_variables" as *;
+@use "@/styles/_mixins" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  --color-primary: #007d3e;
+  --color-second: #000760;
+  --color-error: #e93c37;
+
+  --color-font-primary: #333333;
+  --color-font-second: #828282;
+
+  --f-en: "Roboto", sans-serif;
+  --f-ar: "tajawal", sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-ar;
+  font-size: 14px;
+  color: $c-f-p;
+  overflow-x: hidden;
+  background: #f6f4f5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: $c-f-p;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-f-s;
+  }
+}
+
+.containerMain {
+  padding: 0px 84px;
+
+  @include medium {
+    padding: 0px 32px;
+  }
+
+  @include small {
+    padding: 0px 16px;
+  }
+}

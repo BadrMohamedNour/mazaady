@@ -1,0 +1,28 @@
+$extraSmall-width: 480px;
+$small-width: 768px;
+$medium-width: 991px;
+$large-width: 1280px;
+
+@mixin extraSmall {
+  @media (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: #{$large-width}) {
+    @content;
+  }
+}
